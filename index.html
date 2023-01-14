@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pink: "#f0a1ee",
+              yellow: "#ebe88f",
+            },
+          },
+        },
+      };
+    </script>
+
+    <title>Quote Generator</title>
+  </head>
+  <body class="bg-gradient-to-r from-pink to-yellow">
+    <!-- Background -->
+    <img
+      id="bg-image"
+      src=""
+      class="fixed top-0 left-0 h-full w-full blur-sm object-cover mix-blend-overlay"
+    />
+
+    <!-- Content -->
+    <main
+      class="relative container mx-auto text-center px-8 py-4 bg-white min-h-screen bg-opacity-75"
+    >
+      <!-- Main Content -->
+      <section class="max-w-3xl mx-auto">
+        <div>
+          <h1 class="text-2xl font-bold">Random Quotes Generator</h1>
+        </div>
+
+        <!-- Image Preview and generator -->
+        <div class="md:px-8">
+          <button
+            class="my-4 rounded-lg bg-blue-50 px-4 py-1 duration-500 hover:bg-pink"
+            id="generate-btn"
+          >
+            Generate
+          </button>
+          <img
+            class="rounded-xl border-4 mx-auto border-black"
+            id="quote-image"
+            src="?"
+            alt=""
+          />
+          <h2 id="quote-title">No generated quote</h2>
+          <p id="view-count" class="font-medium"></p>
+        </div>
+      </section>
+
+      <!-- Top Rankings content -->
+      <section class="py-8">
+        <!-- Ranking title -->
+        <h2 id="top-view-title" class="text-xl font-bold"></h2>
+
+        <!-- Ranking Container -->
+        <div
+          id="view-container"
+          class="mt-2 h-full grid gap-4 md:grid-cols-2 lg:grid-cols-3"
+        ></div>
+      </section>
+    </main>
+
+    <!-- Personal Script -->
+    <script src="/app.js"></script>
+  </body>
+</html>
